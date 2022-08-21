@@ -2,8 +2,10 @@
   "name": "mocktask",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "dev": "web-dev-server --node-resolve --open --watch",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/DevPushkar/MockTask#readme",
   "dependencies": {
+    "@web/dev-server": "^0.1.34",
+    "es-dev-server": "^2.1.0",
     "lit-html": "^2.3.1"
   }
 }
