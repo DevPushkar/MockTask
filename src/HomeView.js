@@ -1,7 +1,10 @@
 import { html } from "lit-html";
 import AbstractComponent from "./AbstractComponent";
-import Page1Component from "./Page1Component";
-import Page2Component from "./Page2Component";
+import FirstPageComponent from "./FirstPageComponent";
+import FourthPageComponent from "./FourthPageComponent";
+import SecondPageComponent from "./SecondPageComponent";
+import ThirdPageComponent from "./ThirdPageComponent";
+
 
 const appState = {
   email: "",
@@ -17,31 +20,50 @@ export default class HomeView extends AbstractComponent {
     this.currentIndex = 0;
     this.states = [
       () =>
-        html`<div class="row"><app-page1
+        html`<app-firstpage
           .appState=${appState}
           @input=${() => {
             this.refreshComponent();
           }}
-          ></app-page1
+          ></app-firstpage
         >`,
       () =>
-        html`<app-page2
+        html`<app-secondpage
           .appState=${appState}
           @input=${() => {
             this.refreshComponent();
           }}
-          ></app-page2
-        ></div>`,
-    ];
+          ></app-secondpage
+        >`,
+        () =>
+        html`<app-thirdpage
+          .appState=${appState}
+          @input=${() => {
+            this.refreshComponent();
+          }}
+          ></app-thirdpage
+        >`,
+             () =>
+             html`<app-fourthpage
+               .appState=${appState}
+               @input=${() => {
+                 this.refreshComponent();
+               }}
+               ></app-fourthpage
+             >`
+        ];
   }
 
   render() {
     const getCurrentComponent = this.states[this.currentIndex];
-    return html`
+    console.log(this.states)
+    console.log(this.currentIndex);
+    return html`<div class="d-flex justify-content-center">
       ${getCurrentComponent()}
+      </div>
       <div class="d-flex justify-content-center">
         <button
-          class="btn btn-primary mt-4 ${this.currentIndex === this.states.length - 1
+          class="btn btn-primary m-4 ${this.currentIndex === this.states.length - 1
             ? "d-none"
             : ""}"
           @click=${() => {
@@ -52,7 +74,7 @@ export default class HomeView extends AbstractComponent {
           Next
         </button>
         <button
-          class="btn btn-secondary mt-4 ${this.currentIndex === 0 ? "d-none" : ""}"
+          class="btn btn-secondary m-4 ${this.currentIndex === 0 ? "d-none" : ""}"
           @click=${() => {
             this.currentIndex -= 1;
             this.refreshComponent();
