@@ -7,12 +7,14 @@ export default class SecondPageComponent extends AbstractComponent {
     return html`
     <div class='Container'>
       <div class='Image-container'>
-        <img src="./src/static/car1.jpeg" class="img-fluid img-thumbnail" width="550px" height="200px"/>
+        <img src="./src/static/car1.jpeg" style="object-fit: cover;" width="550px" height="200px"/>
+        <div class="progress" style="height: 1px;">
+          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
       </div>
-        <div class='Form text-center'>
+        <form class='Form text-center'>
           <span>
-            This is your first step for a new brand car. Please provide your
-            email address
+           We need a little bit more information about you!
           </span>
           <div>
             <div class='form-check form-check-inline mt-1'>
@@ -72,7 +74,7 @@ export default class SecondPageComponent extends AbstractComponent {
           />
           <input
             placeholder='Date of birth'
-            type='text'
+            type='date'
             class='Input'
             .value=${this.appState.dateOfBirth}
             @input=${(e) => {

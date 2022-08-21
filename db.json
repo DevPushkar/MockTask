@@ -1,0 +1,144 @@
+{
+  "people": [
+    {
+      "id": "001",
+      "firstName": "Pushkar",
+      "lastName": "Adhikari",
+      "email": "abc@ts.de",
+      "dateOfBirth": "20.10.2000",
+      "gender": "MALE"
+    },
+    {
+      "id": "001",
+      "firstName": "Pushkar1",
+      "lastName": "Adhikari1",
+      "email": "abc3@ts.de",
+      "dateOfBirth": "20.10.2001",
+      "gender": "MALE"
+    },
+    {
+      "id": "s3rzH9l"
+    },
+    {
+      "id": "MTL6aJH"
+    },
+    {
+      "id": "vm-rCV4"
+    },
+    {
+      "id": "ks7JSJ0"
+    },
+    {
+      "email": "er",
+      "gender": "MALE",
+      "firstName": "er",
+      "lastName": "er",
+      "dateOfBirth": "er",
+      "id": "PZ7qrK_"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "X1KzJ-S"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "3tDxhi6"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "1hwmLa1"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "eO_qlrT"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "zSHhJtM"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "dcM5Via"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "uboqmFK"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "o20wAU-"
+    },
+    {
+      "email": "wew",
+      "gender": "MALE",
+      "firstName": "wewe",
+      "lastName": "wewe",
+      "dateOfBirth": "2022-08-21",
+      "id": "XxcCJIZ"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "k1hNG_p"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "LfombfG"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "n8gVSIj"
+    },
+    {
+      "email": "",
+      "gender": "",
+      "firstName": "",
+      "lastName": "",
+      "dateOfBirth": "",
+      "id": "74QPXvi"
+    }
+  ]
+}

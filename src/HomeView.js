@@ -5,7 +5,6 @@ import FourthPageComponent from "./FourthPageComponent";
 import SecondPageComponent from "./SecondPageComponent";
 import ThirdPageComponent from "./ThirdPageComponent";
 
-
 const appState = {
   email: "",
   gender: "",
@@ -54,6 +53,20 @@ export default class HomeView extends AbstractComponent {
         ];
   }
 
+  async _postData() {
+    const myHeaders = new Headers();
+
+    myHeaders.append("Content-Type", "application/json");
+    const resp = await fetch("http://localhost:3000/people", {
+      method: "POST",
+      body: JSON.stringify(appState),
+      headers: myHeaders,
+    });
+    const respData = await resp.json();
+    appState.id = respData.id;
+    this.refreshComponent();
+  }
+
   render() {
     const getCurrentComponent = this.states[this.currentIndex];
     console.log(this.states)
@@ -61,20 +74,24 @@ export default class HomeView extends AbstractComponent {
     return html`<div class="d-flex justify-content-center">
       ${getCurrentComponent()}
       </div>
-      <div class="d-flex justify-content-center">
+      <div class="container">
+      <div class="d-flex flex-sm-row flex-column justify-content-center mt-5 gap-3">
         <button
-          class="btn btn-primary m-4 ${this.currentIndex === this.states.length - 1
+          class="btn btn-primary ${this.currentIndex === this.states.length - 1
             ? "d-none"
             : ""}"
           @click=${() => {
+            if(this.currentIndex === 2) {
+              this._postData()
+            }
             this.currentIndex += 1;
             this.refreshComponent();
           }}
         >
-          Next
+          Next Step
         </button>
         <button
-          class="btn btn-secondary m-4 ${this.currentIndex === 0 ? "d-none" : ""}"
+          class="btn btn-secondary ${this.currentIndex === 0 || this.currentIndex === this.states.length - 1 ? "d-none" : ""}"
           @click=${() => {
             this.currentIndex -= 1;
             this.refreshComponent();
@@ -82,6 +99,15 @@ export default class HomeView extends AbstractComponent {
         >
           Back
         </button>
+        <button
+          class="btn btn-primary ${this.currentIndex === this.states.length - 1 ? "" : "d-none"}"
+          @click=${() => {
+            window.location.reload();
+          }}
+        >
+          Start New Application
+        </button>
+        </div>
       </div>`;
   }
 

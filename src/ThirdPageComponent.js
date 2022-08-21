@@ -6,7 +6,10 @@ export default class ThirdPageComponent extends AbstractComponent {
         return html`
         <div class='Container'>
           <div class='Image-container'>
-            <img src="./src/static/car3.jpeg" class="img-fluid img-thumbnail" width="550px" height="200px"/>
+            <img src="./src/static/car3.jpeg" width="550px" height="200px" style="object-fit: cover; object-position: 50% 70%"/>
+            <div class="progress" style="height: 1px;">
+              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
           </div>
             <div class='Form text-center'>
               <span>
@@ -14,7 +17,7 @@ export default class ThirdPageComponent extends AbstractComponent {
               </span
               >
               <div class='Image-container'>
-                <img src="./src/static/user.jpeg" width="100px" height="100px"/>
+                <img src="./src/static/user.jpeg" width="100px" height="100px" class="m-3" style="border-radius: 15px"/>
               </div>  
           </div>
             </div>

@@ -1,5 +1,6 @@
 /** @format */
 
+
 .Container {
   display: flex;
   flex-direction: column;
@@ -7,12 +8,22 @@
 }
 
 .Images-container {
-  width: 90vh;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media (max-width: 767px) {
+  .Car1 {
+    width: 60%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+}
+
 .Car1 {
   position: absolute;
   left: calc(50% - 200px);
@@ -26,43 +37,29 @@
 
 .Image-container {
   border-radius: 1rem;
-  border: 1px solid black;
-  overflow: hidden;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.32);
-  background: #61dafb;
+  
 }
 
 input:focus {
   outline: none;
 }
+
 .Form {
+  width: 100%;
   margin-top: 1rem;
   color: black;
-  display: flex;
-  flex-direction: column;
 }
+
 .Input {
-  width: 100%;
+  width: 90%;
   margin-top: 1rem;
   border-top: none;
   border-left: none;
   border-right: none;
   border-color: dodgerblue;
 }
-.Button {
-  background-color: dodgerblue;
-  color: white;
-  font-size: larger;
-  border: 1px solid dodgerblue;
-  margin-top: 2rem;
-  border-radius: 0.3rem;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-image {
+  border-radius: 2rem;
+  padding: 1rem;
 }
